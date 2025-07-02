@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <nav className="bg-gray-100 left-0 right-0 h-20 flex flex-row items-center justify-between px-20 shadow-xl shadow-orange-100">
+      <nav className="bg-gray-100 left-0 right-0 h-20 flex flex-row items-center justify-between px-20 shadow-xl shadow-gray-300">
         <Link href={"/"}>
           <div className=" bg-amber-100 py-1 px-6 font-bold text-xl rounded-xl hover:bg-amber-200 ">
             Home
