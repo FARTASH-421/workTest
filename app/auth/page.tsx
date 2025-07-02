@@ -16,17 +16,16 @@ const AuthPage: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // 👈 Prevent default form submission
-
+    e.preventDefault();
     if (isValid) {
-      alert(`Phone number ${phone} is valid and submitted.`);
-
       try {
         const res = await fetch("https://randomuser.me/api/?results=1&nat=us");
         const data = await res.json();
 
         // Save user to localStorage
         localStorage.setItem("randomUser", JSON.stringify(data.results[0]));
+        alert(`Phone number ${phone} is valid and submitted.`);
+
         router.push("/dashboard");
       } catch (error) {
         console.error("Failed to fetch random user:", error);
